@@ -30,11 +30,12 @@
   <script>
     function DetectAndlaunch() {
       let os = getMobileOperatingSystem();
-      if (os == "Android") {
-        window.location.href ="intent:#Intent;action=com.rezababaei.deeplinktester;category=android.intent.category.DEFAULT;category=android.intent.category.BROWSABLE;S.msg_from_browser=Launched%20from%20Browser;end";
-
+         if (os == "Android") {
+        // window.location.href ="intent:#Intent;action=com.rezababaei.deeplinktester;category=android.intent.category.DEFAULT;category=android.intent.category.BROWSABLE;S.msg_from_browser=Launched%20from%20Browser;end";
+        window.location.href ="intent:#Intent;action=com.etick.mobilemancard;category=android.intent.category.DEFAULT;category=android.intent.category.BROWSABLE;S.msg_from_browser=Launched%20from%20Browser;end";
+        // com.etick.mobilemancard
         setTimeout(function appNotInstalled() {
-          window.location.replace("http://play.google.com/store");
+          window.location.replace("https://cafebazaar.ir/app/com.etick.mobilemancard");
         }, 100);
       }
 
