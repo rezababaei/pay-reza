@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="utf-8" />
-  <input id="clickMe" type="button" value="clickme" onclick="DetectAndServe();" />
-  <input id="DeepLink" type="button" value="Deep Link" onclick="runPayPod();" />
+<!--   <input id="clickMe" type="button" value="clickme" onclick="DetectAndServe();" /> -->
+  <input id="DeepLink" type="button" value="DeeplinkTester" onclick="runDeeplinkTester();" />
 
   
   <script>
@@ -28,7 +28,7 @@
     }</script>
 
   <script>
-    function runPayPod() {
+    function runDeeplinkTester() {
       let os = getMobileOperatingSystem();
       if (os == "Android") {
         // window.location.href = "intent://something#Intent;scheme=deeplinkmarket;package=com.example.deeplinkmarket;end;";
@@ -37,8 +37,8 @@
         setTimeout(function appNotInstalled() {
           window.location.replace("http://play.google.com/store");
         }, 100);
-        // com.rezababaei.deeplinkmarket
-        window.location.replace("intent://rezababaei.com/#Intent;scheme=https;package=com.rezababaei.deeplinkmarket;end;");
+        // com.rezababaei.deeplinktester
+        window.location.replace("intent://rezababaei.github.io/#Intent;scheme=https;package=com.rezababaei.deeplinktester;end;");
       }
     }
 
