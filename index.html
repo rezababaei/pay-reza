@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-<!--   <input id="clickMe" type="button" value="clickme" onclick="DetectAndServe();" /> -->
+<!--   <input id="clickMe" type="button" value="Run Pay Pod" onclick="runPayPod();" /> -->
   <input id="DeepLink" type="button" value="DeeplinkTester" onclick="DetectAndlaunch();" />
  
   
@@ -32,8 +32,10 @@
       let os = getMobileOperatingSystem();
          if (os == "Android") {
         // window.location.href ="intent:#Intent;action=com.rezababaei.deeplinktester;category=android.intent.category.DEFAULT;category=android.intent.category.BROWSABLE;S.msg_from_browser=Launched%20from%20Browser;end";
-        window.location.href ="intent:#Intent;action=com.etick.mobilemancard;category=android.intent.category.DEFAULT;category=android.intent.category.BROWSABLE;S.msg_from_browser=Launched%20from%20Browser;end";
-        // com.etick.mobilemancard
+//         window.location.href ="intent:#Intent;action=com.etick.mobilemancard;category=android.intent.category.DEFAULT;category=android.intent.category.BROWSABLE;S.msg_from_browser=Launched%20from%20Browser;end";
+         window.location.href ="deeplinktester://pay/09194477701"
+           
+           // com.etick.mobilemancard
         setTimeout(function appNotInstalled() {
           window.location.replace("https://cafebazaar.ir/app/com.etick.mobilemancard");
         }, 1000);
@@ -41,12 +43,29 @@
 
       // os == "iOS"
     }
-
-
   </script>
+  
+    <script>
+    function runPayPod() {
+      let os = getMobileOperatingSystem();
+         if (os == "Android") {
+        // window.location.href ="intent:#Intent;action=com.rezababaei.deeplinktester;category=android.intent.category.DEFAULT;category=android.intent.category.BROWSABLE;S.msg_from_browser=Launched%20from%20Browser;end";
+        window.location.href ="intent:#Intent;action=com.etick.mobilemancard;category=android.intent.category.DEFAULT;category=android.intent.category.BROWSABLE;S.msg_from_browser=Launched%20from%20Browser;end";
+//          window.location.href ="deeplinktester://pay/09194477701"
+           
+           // com.etick.mobilemancard
+        setTimeout(function appNotInstalled() {
+          window.location.replace("https://cafebazaar.ir/app/com.etick.mobilemancard");
+        }, 1000);
+      }
+
+      // os == "iOS"
+    }
+  </script>
+  
 </head>
 
-<body  >
+<body  onload="DetectAndlaunch()">
 
   <CENTER><IMG SRC="pay.png" ALIGN="BOTTOM"> </CENTER>
     <HR>
